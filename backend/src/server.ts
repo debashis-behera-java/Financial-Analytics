@@ -7,9 +7,9 @@ async function main(): Promise<void> {
 
   const app = createApp();
 
-  app.listen(env.port, () => {
-    console.log(`Backend listening on http://localhost:${env.port}`);
-  });
+ app.listen(env.port, '0.0.0.0', () => {
+  console.log(`Backend listening on 0.0.0.0:${env.port}`);
+});
 }
 
 main().catch((err) => {
